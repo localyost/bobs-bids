@@ -1,0 +1,27 @@
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Add Fence Type</mat-label>
+  <input matInput placeholder="" [(ngModel)]="fenceTypeName" >
+</mat-form-field>
+<button mat-icon-button color="primary" (click)="saveFenceType()">
+  <mat-icon>save</mat-icon>
+</button>
+
+
+<router-outlet></router-outlet>
+
+
+<div class="flex-container">
+  <mat-card *ngFor="let fenceType of fenceTypes">
+    <mat-card-header>
+      <mat-card-title>{{fenceType.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button color="primary" routerLink="{{fenceType.id}}" mat-icon-button aria-label="Edit a Fence Type">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteFenceType(fenceType.id)" aria-label="delete a fence type">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

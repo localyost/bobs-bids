@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ComponentsModule} from "./components/components.module";
 import {BidsModule} from "./bids/bids.module";
 import {PriceListModule} from "./price-list/price-list.module";
+import {ArticleModule} from "./article/article.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {PriceListModule} from "./price-list/price-list.module";
   imports: [
     BidsModule,
     PriceListModule,
+    ArticleModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

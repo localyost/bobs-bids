@@ -5,12 +5,16 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterModule} from "@angular/router";
+import { DeleteModalComponent } from './delete-modal/delete-modal.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 
 @NgModule({
     declarations: [
-        ToolBarComponent
+        ToolBarComponent,
+        DeleteModalComponent
     ],
     exports: [
         ToolBarComponent
@@ -20,7 +24,9 @@ import {RouterModule} from "@angular/router";
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    MatInputModule,
+    MatDialogModule
   ]
 })
 export class ComponentsModule { }
